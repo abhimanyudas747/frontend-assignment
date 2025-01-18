@@ -1,0 +1,58 @@
+.App {
+  width: 400px;
+  border: 1px solid #adadad;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 5px -3px rgb(0 0 0 / 25%);
+}
+
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 0.5px solid #cecccc;
+  padding: 5px;
+  text-align: justify;
+}
+
+tr:nth-child(even) {
+  background-color: #62a1ff4f;
+}
+
+.table-div {
+  height: 175px;
+  padding: 5px;
+  & table {
+    width: 100%;
+  }
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  & button {
+    padding: 5px;
+    border: 1px solid #62a1ff;
+    background-color: #62a1ff;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    &:disabled {
+      background-color: #cecccc;
+      border: 1px solid #cecccc;
+      cursor: not-allowed;
+    }
+  }
+} 
+
+.title-div h1 {
+  font-size: 24px;
+  text-align: center;
+}
