@@ -34,7 +34,7 @@ function App() {
   }, [page]);
 
   const start = useMemo(() => (page - 1) * ITEMS_PER_PAGE, [page]);
-  const end = useMemo(() => page * ITEMS_PER_PAGE);
+  const end = useMemo(() => page * ITEMS_PER_PAGE, [page]);
   return (
     <div className="App">
       <div className='title-div'>
