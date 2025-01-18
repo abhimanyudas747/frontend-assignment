@@ -78,7 +78,9 @@ test('clicking next and prev button should change page', async () => {
     expect(table).toBeInTheDocument();
   })
   const nextBtn = await screen.findByTestId("next-btn");
-  nextBtn.click();
+  await waitFor(() => {
+    nextBtn.click();
+  })
   await waitFor(() => {
     expect(table).toBeInTheDocument();
   })
@@ -89,7 +91,9 @@ test('clicking next and prev button should change page', async () => {
   expect(cells[1].textContent).toBe('114');
   expect(cells[2].textContent).toBe('2065');
   const prevBtn = await screen.findByTestId("prev-btn");
-  prevBtn.click();
+  await waitFor(() => {
+    prevBtn.click();
+  })
   await waitFor(() => {
     expect(table).toBeInTheDocument();
   })
